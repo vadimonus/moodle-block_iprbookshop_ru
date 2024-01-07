@@ -118,8 +118,7 @@ class block_iprbookshop_ru extends block_base {
                 $text = get_string('defaultlink', 'block_iprbookshop_ru');
             }
             $url = new moodle_url('/blocks/iprbookshop_ru/redirect.php', array('contextid' => $PAGE->context->id));
-            $link = new action_link($url, $text);
-            $link->attributes = array('target' => '_blank');
+            $link = new action_link($url, $text, null, array('target' => '_blank'));
             $this->content->text .= html_writer::div($OUTPUT->render($link));
         }
 
